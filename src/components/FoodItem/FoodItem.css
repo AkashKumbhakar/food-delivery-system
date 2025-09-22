@@ -1,0 +1,29 @@
+.food-item{
+    transition: 3s;
+    animation: fadeIn 1.5s;
+}
+.food-item-img-container{
+    position: relative;
+}
+.add{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+}
+.food-item-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
