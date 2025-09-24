@@ -3,12 +3,13 @@ import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
 import LoginPopup from "../../components/LoginPopup/LoginPopup";
-
+import { toast } from 'react-toastify';
 const Cart = () => {
   const { foods,cartItems, removeFromCart, getTotalCartAmount,user_id } = useContext(StoreContext);
   const navigate=useNavigate();
   let orderHandler=()=>{
-    !user_id?alert("You need to Login first"):navigate('/order');
+    // !user_id?alert("You need to Login first"):navigate('/order');
+    !user_id?toast.error("You are not logged in!"):navigate('/order');
   
   }
   return (

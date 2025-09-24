@@ -9,7 +9,7 @@ const stripePromise = loadStripe(
 );
 const PlaceOrder = () => {
   const { foods, cartItems, getTotalCartAmount, user_id } =
-    useContext(StoreContext);
+useContext(StoreContext);
 
   const placeOrder = async () => {
     const stripe = await stripePromise;
